@@ -15,6 +15,13 @@ conversation = [
     HumanMessage('give me website')
 ]
 
-response = model.invoke(conversation)
 
-print(response.content)
+
+for chunk in model.stream(conversation):
+    print(chunk.text, end='', flush=True)
+
+# response = model.invoke(conversation)
+
+# response = model.invoke('Hello, who is python?')
+
+# print(response.content)
