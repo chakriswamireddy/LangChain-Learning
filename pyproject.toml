@@ -1,0 +1,25 @@
+[project]
+name = "lanchain"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "chakri-ch", email = "chakri@edunxt.ai" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.4.8",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.2",
+    "langchain-ollama>=1.1.0",
+    "langchain-text-splitters>=1.1.3",
+    "pypdf>=6.21.4",
+    "rank-bm25>=0.2.2",
+]
+
+[project.scripts]
+lanchain = "lanchain:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
